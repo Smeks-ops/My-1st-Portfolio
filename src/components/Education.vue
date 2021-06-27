@@ -1,29 +1,39 @@
 <template>
-  <section>
+  <section id="education-experience">
     <v-container>
       <v-row>
         <v-col>
-          <h1>Education</h1>
+          <h1>Experience</h1>
         </v-col>
       </v-row>
       <v-row>
         <v-col>
-          <v-timeline>
-            <v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>
-              <template v-slot:opposite>
-                <span :class="`headline font-weight-bold ${year.color}--text`" v-text="year.year"></span>
+          <v-card max-width="450" class="mx-auto">
+            <v-toolbar color="cyan" dark>
+              <v-toolbar-title>Experience</v-toolbar-title>
+
+              <v-spacer></v-spacer>
+            </v-toolbar>
+
+            <v-list three-line>
+              <template v-for="(item, index) in items">
+                <v-subheader v-if="item.header" :key="item.header" v-text="item.header"></v-subheader>
+
+                <v-divider v-else-if="item.divider" :key="index" :inset="item.inset"></v-divider>
+
+                <v-list-item v-else :key="item.title">
+                  <v-list-item-avatar>
+                    <v-img :src="item.avatar"></v-img>
+                  </v-list-item-avatar>
+
+                  <v-list-item-content>
+                    <v-list-item-title v-html="item.title"></v-list-item-title>
+                    <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
+                  </v-list-item-content>
+                </v-list-item>
               </template>
-              <div class="py-4">
-                <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
-                  Lorem ipsum
-                </h2>
-                <div>
-                  Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at. Est et nobis iisque percipit, an vim
-                  zril disputando voluptatibus, vix an salutandi sententiae.
-                </div>
-              </div>
-            </v-timeline-item>
-          </v-timeline>
+            </v-list>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -32,31 +42,20 @@
 
 <script>
 export default {
-  data() {
-    return {
-      years: [
-        {
-          color: "cyan",
-          year: "1960",
-        },
-        {
-          color: "green",
-          year: "1970",
-        },
-        {
-          color: "pink",
-          year: "1980",
-        },
-        {
-          color: "amber",
-          year: "1990",
-        },
-        {
-          color: "orange",
-          year: "2000",
-        },
-      ],
-    };
-  },
+  data: () => ({
+    items: [
+      {
+        avatar: "",
+        title: "UPBASE - April 2021 to present",
+        subtitle: `<span class="text--primary">Fullstack Intern</span> &mdash; Design client-side and server-side web apps`,
+      },
+      { divider: true, inset: true },
+      {
+        avatar: "",
+        title: "Blutenant Miari - Nov 2020 to April 2021",
+        subtitle: `<span class="text--primary">Backend Intern</span> &mdash; Participate in the entire application lifecycle, focusing on coding and debugging.`,
+      },
+    ],
+  }),
 };
 </script>

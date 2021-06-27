@@ -1,5 +1,5 @@
 <template>
-  <section class="project-section">
+  <section id="projects" class="project-section">
     <v-container>
       <v-row>
         <v-col>
@@ -34,19 +34,21 @@ export default {
         {
           name: "WYSIWYG",
           github: "https://github.com/Smeks-ops/WYSIWYG",
-          description: "",
+          description:
+            "A webpage that fetches data from an api endpoint (https://api.binance.com/api/v3/ticker/24hr) every 30 seconds, stores it in a vuex store and displays the historical data retrieved and stored for each symbol through its own page route",
           image: "https://github.com/Smeks-ops/WYSIWYG/blob/main/wysiwyg%202.png?raw=true",
         },
         {
           name: "GIGO",
           github: "https://github.com/Smeks-ops/TEAM-GIGO-CODING-CHALLENGE",
-          description: "",
+          description:
+            "An api service that fetches data from an api endpoint every 30 seconds and stores it in a database table and also displays the historical data retrieved and stored for each symbol through its own unique endpoint.",
           image: "https://github.com/Smeks-ops/TEAM-GIGO-CODING-CHALLENGE/blob/main/gigo-binance.png?raw=true",
         },
         {
           name: "Monster Slayer",
           github: "https://github.com/Smeks-ops/Simple-Monster-Slayer-Game",
-          description: ";g;ou tut;ut;g iug;uoto;lkjhuhuguiyuig u ahj f ah ;ah; hf  yuh;kgg yty yyt y gyu y yt liuug",
+          description: "A web game app made with Vuejs and Javascript",
           image: "https://github.com/Smeks-ops/Simple-Monster-Slayer-Game/blob/main/Monster%20Slayer.png?raw=true",
         },
       ],
