@@ -9,7 +9,7 @@
       <v-row>
         <v-col>
           <v-card max-width="450" class="mx-auto">
-            <v-toolbar color="cyan" dark>
+            <v-toolbar color="blue" dark>
               <v-toolbar-title>Experience</v-toolbar-title>
 
               <v-spacer></v-spacer>
