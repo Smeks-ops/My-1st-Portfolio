@@ -15,7 +15,7 @@ import Projects from "@/components/Projects.vue";
 
 export default {
   metaInfo: {
-    title: "Hello, world!",
+    title: "Osemeke Echenim",
   },
   components: {
     About,
