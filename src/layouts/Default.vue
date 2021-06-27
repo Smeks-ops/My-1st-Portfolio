@@ -2,7 +2,7 @@
   <v-app>
     <template>
       <!-- <v-card height="" width="256" class="mx-auto"> -->
-      <v-navigation-drawer width="280px" permanent>
+      <v-navigation-drawer width="280px" permanent >
         <v-list-item>
           <!-- <v-list-item-avatar>
             <img src="C:\Users\DELL\Documents\Oses's Projects\Portfolio Website\My-1st-Portfolio\src\images\IMG_20210201_145425.jpg">
@@ -46,7 +46,7 @@ export default {
       items: [
         { title: "About", icon: "mdi-account-box-outline" }, 
         { title: "Projects", icon: "mdi-apps" }, 
-        { title: "Education", icon: "mdi-school-outline" },
+        { title: "Education & Experience", icon: "mdi-school-outline" },
         { title: "Contact", icon: "mdi-message-text-outline" }],
 
     };
@@ -68,5 +68,6 @@ query {
 }</style
 .v-main {
   flex: 1 0;
+  margin-left: 280px;
 }
 >>

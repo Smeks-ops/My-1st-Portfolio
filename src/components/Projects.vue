@@ -8,16 +8,15 @@
       </v-row>
       <v-row class="justify-space-around mb-8 mt-4">
         <v-card v-for="project in projects" :key="project.name" class="" max-width="300">
-          <v-img class="white--text align-end" height="200px" :src="project.image">
-            <v-card-title>{{ project.name }}</v-card-title>
-          </v-img>
+          <v-img class="align-end" height="200px" :src="project.image" />
+          <v-card-title>{{ project.name }}</v-card-title>
 
           <v-card-text class="text--primary">
-            {{ project.description }}
+            {{ truncate(project.description) }}
           </v-card-text>
 
           <v-card-actions>
-            <v-btn color="orange" text href="projects.github">
+            <v-btn color="orange" text :href="project.github">
               Github repo
             </v-btn>
           </v-card-actions>
@@ -36,27 +35,36 @@ export default {
           name: "WYSIWYG",
           github: "https://github.com/Smeks-ops/WYSIWYG",
           description: "",
-          image: "",
+          image: "https://github.com/Smeks-ops/WYSIWYG/blob/main/wysiwyg%202.png?raw=true",
         },
         {
           name: "GIGO",
           github: "https://github.com/Smeks-ops/TEAM-GIGO-CODING-CHALLENGE",
           description: "",
-          image: "",
+          image: "https://github.com/Smeks-ops/TEAM-GIGO-CODING-CHALLENGE/blob/main/gigo-binance.png?raw=true",
         },
         {
           name: "Monster Slayer",
           github: "https://github.com/Smeks-ops/Simple-Monster-Slayer-Game",
-          description: ";g;ou tut;ut;g iug;uoto;ug",
-          image: "https://github.com/Smeks-ops/Simple-Monster-Slayer-Game/blob/main/Monster%20Slayer.png",
+          description: ";g;ou tut;ut;g iug;uoto;lkjhuhuguiyuig u ahj f ah ;ah; hf  yuh;kgg yty yyt y gyu y yt liuug",
+          image: "https://github.com/Smeks-ops/Simple-Monster-Slayer-Game/blob/main/Monster%20Slayer.png?raw=true",
         },
       ],
     };
+  },
+  methods: {
+    truncate(str) {
+      if (str.length > 80) {
+        return str.slice(0, 79) + "...";
+      }
+      return str;
+    },
   },
 };
 </script>
 <style scoped>
 .project-section {
-  background-color: #002d62;
+  background-color: #4158d0;
+  background-image: linear-gradient(43deg, #4158d0 0%, #c850c0 46%, #ffcc70 100%);
 }
 </style>
