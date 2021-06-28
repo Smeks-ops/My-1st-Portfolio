@@ -1,27 +1,29 @@
 <template>
   <section id="projects" class="project-section">
     <v-container>
-      <v-row>
-        <v-col>
-          <h1>Projects</h1>
-        </v-col>
-      </v-row>
-      <v-row class="justify-space-around mb-8 mt-4">
-        <v-card v-for="project in projects" :key="project.name" class="" max-width="300">
-          <v-img class="align-end" height="200px" :src="project.image" />
-          <v-card-title>{{ project.name }}</v-card-title>
+      <v-responsive>
+        <v-row>
+          <v-col>
+            <h1>Projects</h1>
+          </v-col>
+        </v-row>
+        <v-row class="justify-space-around mb-8 mt-4">
+          <v-card v-for="project in projects" :key="project.name" class="" max-width="300">
+            <v-img class="align-end" height="200px" :src="project.image" />
+            <v-card-title>{{ project.name }}</v-card-title>
 
-          <v-card-text class="text--primary">
-            {{ truncate(project.description) }}
-          </v-card-text>
+            <v-card-text class="text--primary">
+              {{ truncate(project.description) }}
+            </v-card-text>
 
-          <v-card-actions>
-            <v-btn color="orange" text :href="project.github">
-              Github repo
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-row>
+            <v-card-actions>
+              <v-btn color="orange" text :href="project.github">
+                Github repo
+              </v-btn>
+            </v-card-actions>
+          </v-card>
+        </v-row>
+      </v-responsive>
     </v-container>
   </section>
 </template>

@@ -1,41 +1,43 @@
 <template>
   <section id="education-experience">
     <v-container>
-      <v-row>
-        <v-col>
-          <h1>Experience</h1>
-        </v-col>
-      </v-row>
-      <v-row>
-        <v-col>
-          <v-card max-width="450" class="mx-auto">
-            <v-toolbar color="blue" dark>
-              <v-toolbar-title>Experience</v-toolbar-title>
+      <v-responsive>
+        <v-row>
+          <v-col>
+            <h1>Experience</h1>
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <v-card max-width="450" class="mx-auto">
+              <v-toolbar color="blue" dark>
+                <v-toolbar-title>Experience</v-toolbar-title>
 
-              <v-spacer></v-spacer>
-            </v-toolbar>
+                <v-spacer></v-spacer>
+              </v-toolbar>
 
-            <v-list three-line>
-              <template v-for="(item, index) in items">
-                <v-subheader v-if="item.header" :key="item.header" v-text="item.header"></v-subheader>
+              <v-list three-line>
+                <template v-for="(item, index) in items">
+                  <v-subheader v-if="item.header" :key="item.header" v-text="item.header"></v-subheader>
 
-                <v-divider v-else-if="item.divider" :key="index" :inset="item.inset"></v-divider>
+                  <v-divider v-else-if="item.divider" :key="index" :inset="item.inset"></v-divider>
 
-                <v-list-item v-else :key="item.title">
-                  <v-list-item-avatar>
-                    <v-img :src="item.avatar"></v-img>
-                  </v-list-item-avatar>
+                  <v-list-item v-else :key="item.title">
+                    <v-list-item-avatar>
+                      <v-img :src="item.avatar"></v-img>
+                    </v-list-item-avatar>
 
-                  <v-list-item-content>
-                    <v-list-item-title v-html="item.title"></v-list-item-title>
-                    <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
-                  </v-list-item-content>
-                </v-list-item>
-              </template>
-            </v-list>
-          </v-card>
-        </v-col>
-      </v-row>
+                    <v-list-item-content>
+                      <v-list-item-title v-html="item.title"></v-list-item-title>
+                      <v-list-item-subtitle v-html="item.subtitle"></v-list-item-subtitle>
+                    </v-list-item-content>
+                  </v-list-item>
+                </template>
+              </v-list>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-responsive>
     </v-container>
   </section>
 </template>
